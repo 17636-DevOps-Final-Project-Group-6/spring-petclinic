@@ -191,6 +191,11 @@
           </execution>
         </executions>
       </plugin>
+       <plugin>
+      <groupId>org.sonarsource.scanner.maven</groupId>  
+      <artifactId>sonar-maven-plugin</artifactId>  
+      <version>3.7.0.1746</version>  
+    </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -392,6 +397,9 @@
           <name>m2e.version</name>
         </property>
       </activation>
+      <properties>
+        <sonar.host.url>http://sonarqube:9000</sonar.host.url>
+      </properties>
       <build>
         <pluginManagement>
           <plugins>
